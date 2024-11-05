@@ -1,8 +1,8 @@
 +++
 title = "OWASP SAMM version 2 - public release"
 date = "2020-01-31T00:00:00+02:00"
-tags = ["version 2", "release", "what's new"]
-categories = ["release"]
+tags = ["version 2", "release"]
+categories = ["SAMM project"]
 banner = "img/banners/undraw_celebration_0jvk.png"
 author = "The SAMM Project Team"
 +++
@@ -16,7 +16,7 @@ The new SAMM v2 consists of the following components:
 * The [SAMM Model](/model/) overview and introduction, explaining the maturity model in detail
 * A [Quick-start Guide](/guidance/quick-start-guide/) with different steps to improve your secure software practice
 * An updated [SAMM Toolbox](/assessment/) to perform SAMM assessments and create SAMM roadmaps
-* A new [SAMM Benchmark initiative](/benchmarking/) to compare your maturity and progress with other similar organizations and teams
+* A new [SAMM Benchmark initiative](/benchmark/) to compare your maturity and progress with other similar organizations and teams
 
 ### What's changed with SAMM v2?
 

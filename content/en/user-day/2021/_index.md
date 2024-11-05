@@ -5,7 +5,7 @@ description: User Day May 27th, 2021
 keywords: ["about","what is","questions", "event", "user"]
 ---
 
-On **May 27th, 2021** we had our seconde OWASP SAMM User Day. Once again, we want to thank all our speakers and attendees for being a part of our community!
+On **May 27th, 2021** we had our second OWASP SAMM User Day. Once again, we want to thank all our speakers and attendees for being a part of our community!
 
 ## Presentations
 
@@ -17,4 +17,4 @@ Here you can find links to videos and presentations for the talks and workshop w
 You can also visit the 2020 SAMM User Day page, where you can see the full list of talks, with downloadable material and YouTube links.
 
 
-{{< button "2020" "Visit the 2020 User Day page">}}
+{{< button "user-day/2020" "Visit the 2020 User Day page">}}

@@ -1,8 +1,8 @@
 +++
 title = "OWASP SAMM Roadmap"
 date = "2021-02-09T00:00:00+02:00"
-tags = ["roadmap", "samm", "next", "what's new"]
-categories = ["roadmap"]
+tags = ["roadmap"]
+categories = ["SAMM project"]
 banner = "img/banners/undraw_navigator_a479.png"
 author = "The SAMM Project Team"
 +++
@@ -55,7 +55,7 @@ Within the next few months
 * Mappings
 * OWASP references
 * PDF generation
-* Data model for assessments and benchmarking
+* Data model for assessments and benchmark
 * Migration to new GitHub organization https://github.com/owaspsamm/
 * Roadmap templates
 * Improved quickstart guide

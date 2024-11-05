@@ -7,9 +7,17 @@ title = "OWASP SAMM"
 disqusShortname = ""
 # Enable Google Analytics by entering your tracking code
 googleAnalytics = "UA-127457120-1"
+# Google Analytics 4 in params
 
 # Define the number of posts per page
 paginate = 10
+
+# Taxonomies
+[taxonomies]
+  category = 'categories'
+  resource_category = 'resource_categories'
+  tag = 'tags'
+  resource_tag = 'resource_tags' 
 
 [module]
 
@@ -27,14 +35,40 @@ paginate = 10
   target = "content/business-function"
   lang = "en"
 
+[[module.imports]]
+  # content
+  path = "github.com/owaspsamm/i18n-FR"
+  disabled = false
+
+  [[module.imports.mounts]]
+  source = "business-function"
+  target = "content/business-function"
+  lang = "fr"
+
 [menu]
 
 # Main menu
 
 [[menu.main]]
     name = "About SAMM"
-    url  = "/about/"
+    identifier = "aboutsamm"
+    url  = ""
     weight = 1
+
+[[menu.main]]
+    name = "What is SAMM"
+    identifier = "about"
+    parent = "aboutsamm"
+    url  = "/about/"
+    weight = 11
+
+[[menu.main]]
+    name = "The team"
+    identifier = "team"
+    parent = "aboutsamm"
+    url  = "/team/"
+    weight = 12
+
 
 [[menu.main]]
     name = "The model"
@@ -42,84 +76,114 @@ paginate = 10
     weight = 2
 
 [[menu.main]]
+    name = "Resources"
+    url  = "/resources/"
+    weight = 3
+
+[[menu.main]]
     name = "Community"
     identifier = "community"
     url  = ""
-    weight = 4
+    weight = 5
 
 [[menu.main]]
     name = "Blog"
     parent = "community"
     url  = "/blog/"
-    weight = 41
+    weight = 51
 
 [[menu.main]]
-    name = "Events"
-    identifier = "events"
+    name = "User Day"
     parent = "community"
-    url  = "/events/"
-    weight = 42
+    url  = "/user-day/"
+    weight = 52
+
+# [[menu.main]]
+#     name = "Events"
+#     identifier = "events"
+#     parent = "community"
+#     url  = "/events/"
+#     weight = 53
 
 [[menu.main]]
     name = "Sponsors"
     identifier = "sponsors"
     parent = "community"
     url  = "/sponsors/"
-    weight = 43
+    weight = 54
+
+# [[menu.main]]
+#     name = "References"
+#     parent = "community"
+#     url  = "/references/"
+#     weight = 55
 
 [[menu.main]]
-    name = "FAQ"
+    name = "Users"
     parent = "community"
-    url  = "/faq/"
-    weight = 44
-
-[[menu.main]]
-    name = "References"
-    parent = "community"
-    url  = "/references/"
-    weight = 45
+    url  = "/samm-users/"
+    weight = 55
 
 [[menu.main]]
     name = "Practitioners"
     parent = "community"
     url  = "/practitioners/"
-    weight = 46
+    weight = 56
+
+[[menu.main]]
+    name = "FAQ"
+    parent = "community"
+    url  = "/faq/"
+    weight = 57
 
 [[menu.main]]
     name = "Contributing"
     parent = "community"
     url  = "/contributing/"
-    weight = 47
+    weight = 58
+
+[[menu.main]]
+    name = "Contact"
+    parent = "community"
+    url  = "/contact/"
+    weight = 59
 
 [[menu.main]]
     name = "Guidance"
     identifier = "guidance"
     url  = ""
-    weight = 3
+    weight = 4
 
 [[menu.main]]
     name = "Getting started"
     parent = "guidance"
     url  = "/guidance/quick-start-guide/"
-    weight = 30
-
-[[menu.main]]
-    name = "Agile"
-    parent = "guidance"
-    url  = "/guidance/agile/"
-    weight = 32
+    weight = 40
 
 [[menu.main]]
     name = "Assessment"
     parent = "guidance"
     url  = "/assessment/"
-    weight = 31
+    weight = 41
 
 [[menu.main]]
-    name = "Benchmarking"
+    name = "Agile"
     parent = "guidance"
-    url  = "/benchmarking/"
-    weight = 33
+    url  = "/guidance/agile/"
+    weight = 42
+
+[[menu.main]]
+    name = "Benchmark"
+    parent = "guidance"
+    url  = "/benchmark/"
+    weight = 43
+
+[[menu.main]]
+    name = "Stream guidance"
+    parent = "guidance"
+    url  = "/stream-guidance/"
+    weight = 44
+
 
 #[[menu.main]]
 #    name = "Version 1.5"
@@ -129,18 +193,17 @@ paginate = 10
 # [[menu.main]]
 #     name = "FAQ"
 #     url  = "/faq/"
-
 #     weight = 7
 
-[[menu.main]]
-    name = "User Day"
-    url  = "/user-day/"
-    weight = 5
+#[[menu.main]]
+#    name = "User Day"
+#    url  = "/user-day/"
+#    weight = 5
 
-[[menu.main]]
-    name = "Contact"
-    url  = "/contact/"
-    weight = 6
+#[[menu.main]]
+#    name = "Contact"
+#    url  = "/contact/"
+#    weight = 6
 
 # Top bar social links menu
 
@@ -166,22 +229,31 @@ paginate = 10
     weight = 4
     name = "Twitter"
     url = "https://twitter.com/OwaspSAMM"
-    pre = "<i class='fab fa-2x fa-twitter'></i>"
+    pre = "<i class='fa-brands fa-2x fa-x-twitter'></i>"
 
 [[menu.topbar]]
-    weight = 5
+    weight = 6
     name = "YouTube"
     url = "https://www.youtube.com/channel/UCEZDbvQrj5APg5cEET49A_g"
     pre = "<i class='fa fa-2x fa-youtube'></i>"
 
 [[menu.topbar]]
-    weight = 6
+    weight = 5
+    name = "Meetup"
+    url = "https://www.meetup.com/owasp-samm/"
+    pre = "<i class='fab fa-2x fa-meetup'></i>"
+
+[[menu.topbar]]
+    weight = 7
     name = "Email"
     url = "mailto:info@owaspsamm.org"
     pre = "<i class='fa fa-2x fa-envelope'></i>"
 
 
 [params]
+    # Google Analytics 4
+    googleAnalyticsID = "G-44N5RHDT94"
+
     viewMorePostLink = "/blog/"
     author = "OWASP SAMM"
     defaultKeywords = ["owasp", "samm", "maturity", "model", "software"]
@@ -225,6 +297,8 @@ paginate = 10
 
     logo = "/img/logo.png"
     logo_small = "/img/logo-small.png"
+    images = ["/img/site-feature-image.png"]
+
     # address = """<p><strong>Universal Ltd.</strong>
     #     <br>13/25 New Avenue
     #     <br>Newtown upon River
@@ -283,8 +357,16 @@ paginate = 10
     link_url = "/events"
     link_text = "Check SAMM events"
 
-[params.pdf]
+[params.course]
     enable = true
+    icon = "fa-solid fa-graduation-cap"
+    title = "SAMM Fundamentals Course"
+    subtitle = "A free, self-paced course to get you started with SAMM"
+    link_url = "https://owaspsamm.thinkific.com/courses/samm"
+    link_text = "Visit the SAMM Fundamentals Course page"
+
+[params.pdf]
+    enable = false
     icon = "fa solid fa-file"
     title = "SAMM PDF"
     subtitle = "We have created a PDF version of the SAMM model."
@@ -299,10 +381,10 @@ paginate = 10
     link_url = "https://owaspsamm.us9.list-manage.com/subscribe?u=b83ce65c91239cb5e623ea83e&id=cbd0520923"
     link_text = "Subscribe to our newsletter"
 
-[params.clients]
+[params.sponsors]
     enable = true
-    # All clients are defined in their own files. You can find example items
-    # at 'exampleSite/data/clients'.
+    # All sponsors are defined in their own files. You can find example items
+    # at 'exampleSite/data/sponsors'.
     # For more informtion take a look at the README.
     title = "Our Sponsors"
     subtitle = "Software powers the world, but insecure software threatens safety, trust, and economic growth."
@@ -328,11 +410,7 @@ defaultContentLanguage = "en"
     languageName = "English"
     weight = 1
     contentDir = "content/en"
-  [languages.es]
-    languageName = "Español"
+  [languages.fr]
+    languageName = "Français"
     weight = 2
-    contentDir = "content/es"
-
-
-
-
+    contentDir = "content/fr"

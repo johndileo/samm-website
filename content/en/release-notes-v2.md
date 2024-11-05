@@ -11,7 +11,7 @@ The new SAMM version 2 consists of the following components:
 * the [SAMM Model](/model/) overview and introduction, explaining the maturity model in detail
 * a [Quick-start Guide](/guidance/quick-start-guide/) with different steps to improve your secure software practice
 * an updated [SAMM Toolbox](/assessment/) to perform SAMM assessments and create SAMM roadmaps
-* a new [SAMM Benchmark initiative](/benchmarking/) to compare your maturity and progress with other similar organizations and teams
+* a new [SAMM Benchmark initiative](/benchmark/) to compare your maturity and progress with other similar organizations and teams
 
 
 The original model [OpenSAMM 1.0](https://www.opensamm.org/) was written by Pravir Chandra and dates back to 2009. Over the last 10 years, it has proven a widely distributed and effective model for improving secure software practices in different types of organizations. With SAMM v2, further improvements have been made to deal with some of its perceived limitations.
@@ -23,7 +23,12 @@ The 3 maturity levels remain as they were. Level 1 is initial implementation; le
 The version 2.0 model now supports frequent updates through small incremental changes on specific parts of the model with regular updates to explanations, tooling, and guidance by the community.
 
 This is the updated SAMM version 2 model:
+
 {{< responsive-image  "/img/pages/SAMM_v2_overview.svg" "SAMM v2 model overview">}}
+---
+> Note: The previous image was created in 2024 and is an updated version of the overview from the 2.0 release. We've decided to replace it for clarity.
+---
+
 
 List of major changes:
 
